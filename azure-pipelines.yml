@@ -24,7 +24,7 @@ pr:
     - README.md
 resources: 
   repositories: 
-    - repository:support-demo
+    - repository: support-demo
       type: github
       name: support-demo
       ref: ${{ variables['Build.SourceBranchName'] }}
