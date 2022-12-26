@@ -27,3 +27,14 @@ resources:
       name: support-demo
       endpoint: shmohanty
       ref: ${{ variables['Build.SourceBranchName'] }}
+stages:
+- stage: secure_buildstage
+  pool:
+    vmImage: windows-latest
+  jobs:
+  - job: secure_buildjob
+    steps:
+    - script: echo This happens before code 
+      displayName: 'Base: Pre-build'
+    - script: echo Building
+      displayName: 'Base: Build'
