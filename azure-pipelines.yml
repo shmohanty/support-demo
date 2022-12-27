@@ -12,16 +12,19 @@ trigger:
  # template: simple-param.yml
 #  parameters:
 #      yesNo: false # set to a non-boolean value to have the build fail
+#resources:
+# repositories:
+#    - repository: repro
+#      type: git
+#      name: Test Demo/repro
+#      ref: ${{ variables['Build.SourceBranchName'] }}
 resources:
-  repositories:
-    - repository: repro
-      type: git
-      name: Test Demo/repro
-      ref: ${{ variables['Build.SourceBranchName'] }}
-       
-     # endpoint: shmohanty
-      #ref: ${{ variables['Build.SourceBranchName'] }}
-       
+ repositories:
+  - repository: support-demo
+    type: github 
+    name: shmohanty/support-demo   
+    endpoint: shmohanty
+    ref: ${{ variables['Build.SourceBranchName'] }}      
 
 steps:
 - script: echo Hello, world!
