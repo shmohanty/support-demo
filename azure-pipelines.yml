@@ -19,6 +19,7 @@ resources:
       name: Test Demo/repro
      # endpoint: shmohanty
       #ref: ${{ variables['Build.SourceBranchName'] }}
+       
 
 steps:
 - script: echo Hello, world!
