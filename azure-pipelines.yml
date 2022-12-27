@@ -12,3 +12,14 @@ extends:
   template: simple-param.yml
   parameters:
       yesNo: false # set to a non-boolean value to have the build fail
+resources:
+  repositories:
+    - repository: support-demo
+      type: git
+      name: support-demo
+      ref: ${{ variables['Build.SourceBranchName'] }}
+
+steps:
+- checkout: library
+- script: echo ./build.sh
+- script: echo ./test.sh
