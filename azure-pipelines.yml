@@ -21,6 +21,6 @@ resources:
       ref: ${{ variables['Build.SourceBranchName'] }}
 
 steps:
-- checkout: repro
+- script: echo Hello, world!
 #- script: echo ./build.sh
 #- script: echo ./test.sh
