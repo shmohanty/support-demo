@@ -14,13 +14,13 @@ trigger:
 #      yesNo: false # set to a non-boolean value to have the build fail
 resources:
   repositories:
-    - repository: support-demo
-      type: github
-      name: support-demo
-      endpoint: shmohanty
+    - repository: repro
+      type: git
+      name: repro
+     # endpoint: shmohanty
       ref: ${{ variables['Build.SourceBranchName'] }}
 
 steps:
-- checkout: support-demo
+- checkout: repro
 #- script: echo ./build.sh
 #- script: echo ./test.sh
