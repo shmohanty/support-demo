@@ -16,7 +16,7 @@ resources:
   repositories:
     - repository: shmohanty
       type: git
-      name: "support-demo"
+      name: support-demo
       ref: ${{ variables['Build.SourceBranchName'] }}
 
 #steps:
