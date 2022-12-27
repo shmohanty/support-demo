@@ -8,10 +8,10 @@
 trigger:
 - none
 
-extends:
-  template: simple-param.yml
-  parameters:
-      yesNo: false # set to a non-boolean value to have the build fail
+#extends:
+ # template: simple-param.yml
+#  parameters:
+#      yesNo: false # set to a non-boolean value to have the build fail
 resources:
   repositories:
     - repository: support-demo
@@ -20,7 +20,7 @@ resources:
       endpoint: shmohanty
       ref: ${{ variables['Build.SourceBranchName'] }}
 
-##steps:
-#- checkout: support-demo
+steps:
+- checkout: support-demo
 #- script: echo ./build.sh
 #- script: echo ./test.sh
