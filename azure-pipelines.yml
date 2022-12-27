@@ -23,8 +23,8 @@ resources:
     - repository: repro
       type: git
       name: Test Demo/repro
-      ref: ${{ variables['Build.SourceBranchName'] }}
-
+      #ref: ${{ variables['Build.SourceBranchName'] }}
+      ref: refs/heads/Kohith
 
 #resources:
  #repositories:
