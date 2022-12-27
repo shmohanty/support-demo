@@ -17,7 +17,7 @@ resources:
     - repository: repro
       type: git
       name: Test Demo/repro
-      ref: Test Demo/qa
+      ref: main
      # endpoint: shmohanty
       #ref: ${{ variables['Build.SourceBranchName'] }}
        
