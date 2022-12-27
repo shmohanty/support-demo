@@ -4,37 +4,11 @@
 # https://aka.ms/yaml
 
 
-pool:
-  vmImage: ubuntu-latest
+# File: azure-pipelines.yml
+trigger:
+- main
 
-trigger: 
- branches: 
-   include: 
-     - main*
-
-
-pr: 
-  branches: 
-    include:
-     - main
-  paths:
-    exclude:
-    - README.md
-resources: 
-  repositories: 
-    - repository: support-demo
-      type: github
-      name: support-demo
-      endpoint: shmohanty
-      ref: ${{ variables['Build.SourceBranchName'] }}
-stages:
-- stage: secure_buildstage
-  pool:
-    vmImage: windows-latest
-  jobs:
-  - job: secure_buildjob
-    steps:
-    - script: echo This happens before code 
-      displayName: 'Base: Pre-build'
-    - script: echo Building
-      displayName: 'Base: Build'
+extends:
+  template: simple-param.yml
+  parameters:
+      yesNo: false # set to a non-boolean value to have the build fail
