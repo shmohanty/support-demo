@@ -14,9 +14,10 @@ extends:
       yesNo: false # set to a non-boolean value to have the build fail
 resources:
   repositories:
-    - repository: shmohanty
-      type: git
+    - repository: support-demo
+      type: github
       name: support-demo
+      endpoint: shmohanty
       ref: ${{ variables['Build.SourceBranchName'] }}
 
 #steps:
