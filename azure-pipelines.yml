@@ -20,7 +20,7 @@ resources:
       endpoint: shmohanty
       ref: ${{ variables['Build.SourceBranchName'] }}
 
-#steps:
-#- checkout: library
-#- script: echo ./build.sh
-#- script: echo ./test.sh
+steps:
+- checkout: library
+- script: echo ./build.sh
+- script: echo ./test.sh
