@@ -6,7 +6,13 @@
 
 # File: azure-pipelines.yml
 trigger:
-- none
+ branches:
+   include:
+     - main* 
+pr:
+  branches:
+    include: 
+      - main*     
 
 extends:
   template: simple-param.yml
